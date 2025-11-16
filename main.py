@@ -52,7 +52,6 @@ async def scrape_kayak_reviews(url: str, filter_option: str, max_pages: int):
             # ✅ Lanza Chromium clásico (evita headless_shell)
             browser = await p.chromium.launch(
                 headless=True,
-                channel="chrome",  # ← Fuerza el binario tradicional
                 args=[
                     '--disable-gpu',
                     '--disable-dev-shm-usage',
@@ -60,8 +59,8 @@ async def scrape_kayak_reviews(url: str, filter_option: str, max_pages: int):
                     '--disable-setuid-sandbox',
                     '--disable-extensions',
                     '--disable-plugins',
-                    '--disable-images',
-                    '--disable-javascript',  # Opcional: mejora velocidad
+                    '--single-process',
+                    '--disable-features=site-per-process'
                 ]
             )
 
