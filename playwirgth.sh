@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# playwright.sh
 set -euxo pipefail
 
 # Instalar dependencias del sistema
-playwright install-deps chromium
+playwright install-deps
 
-# Instalar Chromium
-playwright install chromium
+# Instalar TODOS los navegadores (o al menos chromium)
+playwright install

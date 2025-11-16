@@ -3,4 +3,3 @@ uvicorn
 playwright
 pandas
 python-multipart
-nest-asyncio
