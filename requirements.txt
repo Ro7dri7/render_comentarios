@@ -1,20 +1,5 @@
-#!/usr/bin/env bash
-# playwright.sh
-set -euxo pipefail
-
-# Instalar dependencias del sistema para Chromium
-apt-get update && apt-get install -y \
-    libnss3 \
-    libatk1.0-0 \
-    libatk-bridge2.0-0 \
-    libcups2 \
-    libxkbcommon0 \
-    libxcomposite1 \
-    libxrandr2 \
-    libgbm1 \
-    libasound2 \
-    libpangocairo-1.0-0 \
-    libxss1
-
-# Instalar los navegadores de Playwright
-python -m playwright install chromium
+fastapi
+uvicorn
+playwright==1.48.0
+pandas
+python-multipart
